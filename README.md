@@ -1,43 +1,38 @@
-# RussianRoulette
+# Note List
 
-RussianRoulette, bir C++ konsol uygulaması olarak tasarlanmış, oyuncunun rastgele bir sayı seçerek hayatta kalmaya çalıştığı bir oyun simülasyonudur. Oyunda, oyuncunun seçtiği sayı ile ölümcül sayı eşleşirse oyuncu kaybeder.
+Note List, bir C++ konsol uygulaması olarak tasarlanmış, kullanıcıdan notlar alarak bu notları sıralı bir şekilde listeleyen bir uygulamadır. Kullanıcı, geçerli notlar girebilir ve `-1` girerek notların sıralı bir listesini görüntüleyebilir.
 
 ## Özellikler
 
-- **Rastgele Sayı Üretimi**: Oyunda ölümcül bir sayı rastgele belirlenir.
-- **Kullanıcı Girdisi**: Oyuncu, 1 ile 6 arasında bir sayı seçer.
-- **Önceki Seçim Kontrolü**: Oyuncu daha önce seçtiği bir sayıyı tekrar seçerse uyarılır.
-- **Son Şans**: Oyuncuya son bir karar verme şansı sunulur.
-- **Dinamik Mesajlar**: Oyuncunun seçimlerine göre farklı mesajlar görüntülenir.
+- **Not Girişi**: Kullanıcı, 0 ile 100 arasında geçerli notlar girebilir.
+- **Geçersiz Not Kontrolü**: Geçersiz bir not girildiğinde program sonlanır.
+- **Notların Sıralanması**: Girilen notlar büyükten küçüğe sıralanır.
+- **Orijinal İndeks Bilgisi**: Sıralanan notlar, orijinal öğrenci sırasıyla birlikte görüntülenir.
 
 ## Nasıl Kullanılır?
 
-1. Depoyu klonlayın veya `RussianRoulette.cpp` dosyasını yerel makinenize kopyalayın.
+1. Depoyu klonlayın veya `Note List.cpp` dosyasını yerel makinenize kopyalayın.
 2. Programı bir C++ derleyicisi kullanarak derleyin (örneğin, `g++`).
    ```bash
-   g++ RussianRoulette.cpp -o RussianRoulette
+   g++ "Note List.cpp" -o NoteList
    ```
 3. Derlenmiş çalıştırılabilir dosyayı çalıştırın.
    ```bash
-   ./RussianRoulette
+   ./NoteList
    ```
-4. Oyuncu, 1 ile 6 arasında bir sayı seçerek oyuna başlar.
-5. Oyuncu, seçtiği sayının ölümcül sayı olup olmadığını öğrenir:
-   - Eğer sayı ölümcül değilse, oyuncuya kalan şansı gösterilir.
-   - Eğer sayı ölümcülse, oyuncu kaybeder.
-6. Oyuncu, son şansında devam edip etmeme kararı verebilir.
+4. Kullanıcı, 0 ile 100 arasında notlar girebilir.
+5. Kullanıcı, `-1` girerek notların sıralı bir listesini görüntüleyebilir.
 
 ## Örnek
 
 ```plaintext
-WELCOME TO RUSSIAN RULETTE!!
-You have 1/6 chance to die
-Pick a Number (If you choose same thing you'll die!): 3
-You have 1/5 chance to die.
-Pick a Number (If you choose same thing you'll die!): 5
-You have 1/4 chance to die.
-Pick a Number (If you choose same thing you'll die!): 2
-YOU ARE DEAD!
+Enter Notes: 85
+Enter Notes: 90
+Enter Notes: 75
+Enter Notes: -1
+2. Ogrencinin Notu: 90
+1. Ogrencinin Notu: 85
+3. Ogrencinin Notu: 75
 ```
 
 ## Gereksinimler
@@ -47,9 +42,9 @@ YOU ARE DEAD!
 
 ## Notlar
 
-- Oyunda kullanılan rastgele sayı üretimi, her çalıştırmada farklı bir ölümcül sayı belirler.
-- Oyuncunun daha önce seçtiği bir sayıyı tekrar seçmesi engellenir.
-- Program, kullanıcı girdisi doğrulama ve dinamik mesajlar içerir.
+- Kullanıcı, yalnızca 0 ile 100 arasında geçerli notlar girebilir. Geçersiz bir not girildiğinde program sonlanır.
+- Notlar sıralandıktan sonra, her notun orijinal öğrenci sırası da görüntülenir.
+- Program, kullanıcı dostu bir şekilde dinamik mesajlar içerir.
 
 ## Lisans
 
